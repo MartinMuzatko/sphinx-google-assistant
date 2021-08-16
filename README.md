@@ -1,0 +1,1 @@
+# sphinx-google-assistant
