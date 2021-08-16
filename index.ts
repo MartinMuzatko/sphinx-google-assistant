@@ -8,9 +8,9 @@ const x = {
         override: false,
         content: {
             card: {
-                title: 'Card Title',
-                subtitle: 'Card Subtitle',
-                text: 'Card Content',
+                title: 'Bam Oida',
+                subtitle: 'Moch i jo glott!',
+                text: 'Miau',
                 image: {
                     alt: 'Google Assistant logo',
                     height: 0,
@@ -20,7 +20,7 @@ const x = {
             }
         },
         firstSimple: {
-            speech: 'This is a card rich response.',
+            speech: 'Na von mir aus, aber ich weiß nicht wieso ich mich so gelangweilt anhöre',
             text: ''
         }
     }
