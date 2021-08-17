@@ -1,3 +1,6 @@
+import { Client } from 'https://deno.land/x/mqtt@0.1.2/deno/mod.ts'
+
+const client = new Client({ url: 'mqtt://s-s-f.de' })
 
 const x = {
     session: {
@@ -27,6 +30,7 @@ const x = {
 }
 
 addEventListener('fetch', (event) => {
+    client.publish('sphinx', JSON.stringify(event))
     event.respondWith(
         new Response(JSON.stringify(x), {
             status: 200,
