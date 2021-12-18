@@ -31,8 +31,8 @@ const x = {
 
 addEventListener('fetch', async (event) => {
     // client.publish('sphinx', JSON.stringify(event))
-    const json = await event.request.json()
-    console.log(json)
+    // const json = await event.request.json()
+    console.log(event.request)
     event.respondWith(
         new Response('ok', {
             status: 200,
