@@ -1,6 +1,6 @@
-import { Client } from 'https://deno.land/x/mqtt@0.1.2/deno/mod.ts'
+// 0import { Client } from 'https://deno.land/x/mqtt@0.1.2/deno/mod.ts'
 
-const client = new Client({ url: 'mqtt://s-s-f.de' })
+// const client = new Client({ url: 'mqtt://s-s-f.de' })
 
 const x = {
     session: {
@@ -29,10 +29,12 @@ const x = {
     }
 }
 
-addEventListener('fetch', (event) => {
-    client.publish('sphinx', JSON.stringify(event))
+addEventListener('fetch', async (event) => {
+    // client.publish('sphinx', JSON.stringify(event))
+    const json = await event.request.json()
+    console.log(json)
     event.respondWith(
-        new Response(JSON.stringify(x), {
+        new Response('ok', {
             status: 200,
             headers: { 'content-type': 'application/json' },
         }),
