@@ -1,4 +1,8 @@
-import { Client } from 'https://deno.land/x/mqtt@0.1.2/deno/mod.ts'
+import { Client } from 'https://deno.land/x/mqtt/deno/mod.ts'
+
+// const client = new Client({ url: 'mqtt://s-s-f.de' })
+// await client.connect()
+// client.publish('sphinx', JSON.stringify('event'))
 
 addEventListener('fetch', async (event) => {
     const client = new Client({ url: 'mqtt://s-s-f.de' })
